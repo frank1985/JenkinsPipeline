@@ -48,7 +48,6 @@ pipeline {
 
   }
   environment {
-    localVar
     ChromeDriverPath = 'C:\\Drivers\\Chrome'
   }
 }
