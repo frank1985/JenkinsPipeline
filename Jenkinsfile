@@ -16,12 +16,13 @@ pipeline {
           }
         }
 
-        stage('Deploy') {
-          steps {
-            echo 'Deploying app in iSS server'
-          }
-        }
+      }
+    }
 
+    stage('Deploy') {
+      steps {
+        input(message: 'Do you want to deploy?', id: 'OK')
+        echo 'Deploying app in iSS server'
       }
     }
 
