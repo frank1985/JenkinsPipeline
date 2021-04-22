@@ -17,8 +17,8 @@ pipeline {
         }
 
         stage('Test Log') {
-          environment{
-            LocalVariable = "HelloLocal"
+          environment {
+            LocalVariable = 'HelloLocal'
           }
           steps {
             writeFile(file: 'LogTestFile.txt', text: "This is the chromedriver path ${ChromeDriverPath} and this is the value of the local variable ${LocalVariable}")
@@ -32,7 +32,7 @@ pipeline {
       parallel {
         stage('Deploy') {
           steps {
-            input(message: 'Do you want to deploy?', id: 'OK')
+            input(message: 'Do you want to deploy??', id: 'OK')
             echo 'Deploying app in iSS server'
           }
         }
